@@ -6,7 +6,7 @@ Assume that the square directly North from (x, y) is (x, y+1).
 
 It must be possible to supply input data to your application via a text file specified on the command line.
 
-## INPUT​
+## Input​
 
 The first line of input is the upper-right coordinates of the plateau, the lower-left coordinates are assumed to be 0,0.
 
@@ -14,11 +14,11 @@ The rest of the input is information pertaining to the rovers that have been dep
 
 Each rover will be finished sequentially, which means that the second rover won't start to move until the first one has finished moving.
 
-## OUTPUT​
+## Output​
 
 The output for each rover should be its final coordinates and heading.
 
-## SAMPLE INPUT AND OUTPUT
+## Sample Input And Output
 
 ### Test Input
 
