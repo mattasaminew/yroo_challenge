@@ -24,13 +24,9 @@ The output for each rover should be its final coordinates and heading.
 
 ```
 5 5
-
 1 2 N
-
 LMLMLMLMM
-
 3 3 E
-
 MMRMMRMRRM
 ```
 
@@ -38,6 +34,5 @@ MMRMMRMRRM
 
 ```
 1 3 N
-
 5 1 E
 ```
