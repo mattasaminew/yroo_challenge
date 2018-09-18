@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-To run the program, run the following command at the directory root with the relative filepath for the input. You will need to have ruby installed on the machine
+To run the program, run the following command at the directory root with the relative filepath of the input. You will need to have ruby installed on the machine. You can used 'input/1.txt' as an example
 
 ```
 ruby mars_rover.rb <input_filepath>
@@ -24,9 +24,7 @@ rspec
 
 ## Design Choices
 
-My biggest design choice was to solve the problem with a object-oriented design rather than a simple functional approach. This decision is was made to serve the readibility and maintainability of the code. This is a relatively simple problem but extra layers of complexity could be added (ex. obstacles in terrain or other rovers). Adding functionality on top is easier to handle when the tasks are delegated to their objects.
-
-Features that could be added on in the future include writing output to a file, adding obstacles, considering other rovers on surface
+My biggest design choice was to solve the problem with a object-oriented design rather than a  functional approach. This decision is was made to serve the readability and maintainability of the code. This is a relatively simple problem but extra layers of complexity could be added. Adding functionality on top is easier to handle when the tasks are delegated to their objects for a clearer flow. Features that could be added on in the future include writing output to a file, adding obstacles, considering other rovers on surface
 
 ## Problem
 
