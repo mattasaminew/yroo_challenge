@@ -1,7 +1,8 @@
 # Assumptions
 
 - skips invalid commands but continues w rest of commands
-- if command instructs rover to go off edge, it will stop, return current location, and error
+- if command instructs rover to go off edge, it will stop, return current location and error
+- skips rovers initialized out of bounds
 
 # The Problem
 
