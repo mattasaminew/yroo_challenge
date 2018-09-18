@@ -10,9 +10,13 @@ describe Rover do
 	end
 
 	it "should set result" do
-		r = Rover.new(1, 2, 'N', 'LMLMLMLMM')
-		r.run_commands
-		expect(r.result).to eq '1 3 N'
+		r1 = Rover.new(1, 2, 'N', 'LMLMLMLMM')
+		r1.run_commands
+		expect(r1.result).to eq '1 3 N'
+
+		r2 = Rover.new(3, 3, 'E', 'MMRMMRMRRM')
+		r2.run_commands
+		expect(r2.result).to eq '5 1 E'
 	end
 
 	it "should return no errors" do
