@@ -40,12 +40,12 @@ class Mission
 				if index.odd?
 					rover_loc << line.split(' ')
 				else
-					rover_cmd << line
+					rover_cmd << line.chomp
 				end
 			end
 		end
 
-		rover_cmd.tap(&:pop) if rover_loc.length != rover_cmd.length
+		rover_loc.tap(&:pop) if rover_loc.length != rover_cmd.length
 
 		rover_loc.each_with_index do |loc, i|
 			x = loc[0].to_i
