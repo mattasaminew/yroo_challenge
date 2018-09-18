@@ -1,6 +1,12 @@
 require_relative 'lib/mission'
 
-m = Mission.new("input/1.txt")
-m.run_mission
+input_filepath = ARGV[0]
 
-puts m.result
+if input_filepath
+	m = Mission.new("input/1.txt")
+	m.run_mission
+
+	puts m.result
+else
+	puts "Please provide input filepath"
+end
