@@ -1,3 +1,5 @@
+require_relative 'rover'
+
 class Mission
   attr_reader :max_x, :max_y, :rovers, :completed, :result, :errors
 
