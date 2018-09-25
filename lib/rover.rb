@@ -74,7 +74,9 @@ class Rover
 
 		case @direction
 		when 'N'
-			@loc_y += 1 if !mission || (mission && (@loc_y < mission.max_y))
+			p !check_obstacles('N') && (@loc_y < mission.max_y)
+
+			@loc_y += 1 if !mission || (mission && (!check_obstacles('N') && (@loc_y < mission.max_y)))
 		when 'E'
 			@loc_x += 1 if !mission || (mission && (@loc_x < mission.max_x))
 		when 'S'
@@ -85,6 +87,20 @@ class Rover
 
 		if x == @loc_x && y == @loc_y
 			@errors << "Out of bounds"
+		end
+	end
+
+	def check_obstacles dir
+		mission.obstacles.each do |o|
+			if dir == "N"
+				return true if o[0] == @loc_x && @loc_y == o[1] - 1
+			elsif dir == "E"
+				return true if o[0] == @loc_x && @loc_y == o[1] - 1
+			elsif dir == "S"
+				return true if o[0] == @loc_x && @loc_y == o[1] - 1
+			elsif dir == "W"
+				return true if o[0] == @loc_x && @loc_y == o[1] - 1
+			end
 		end
 	end
 end

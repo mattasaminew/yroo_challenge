@@ -2,11 +2,13 @@ require_relative 'rover'
 
 class Mission
   attr_reader :max_x, :max_y, :rovers, :completed, :result, :errors
+	attr_accessor :obstacles
 
   def initialize txt
 		@completed = false
 		@result = []
 		@errors = []
+		@obstacles = []
 
 		@rovers = []
 		parse_rover_data(txt)
@@ -17,7 +19,9 @@ class Mission
 			r.run_commands
 			@result << r.result
 
-			if !r.errors.empty?
+			if r.errors.empty?
+				@obstacles << r.result.split(' ')
+			else
 				@errors[i] = r.errors
 			end
 		end

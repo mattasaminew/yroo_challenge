@@ -1,4 +1,5 @@
 require_relative '../lib/rover'
+require_relative '../lib/mission'
 
 describe Rover do
 
@@ -23,6 +24,18 @@ describe Rover do
 		r = Rover.new(1, 2, 'N', 'LMLMLMLMM')
 		r.run_commands
 		expect(r.errors.empty?).to eq true
+	end
+
+	context "when obstacles are present" do
+		it "return error" do
+			m = Mission.new("input/1d.txt")
+			m.obstacles << [1, 2]
+			r = Rover.new(1, 1, 'N', 'M')
+			r.mission = m
+			r.run_commands
+			# expect(r.mission).to eq m
+			expect(r.errors).to eq ["Out of bounds"]
+		end
 	end
 
 	context "when invalid command provided" do
